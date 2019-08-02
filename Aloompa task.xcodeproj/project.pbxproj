@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DDA569AF22F3B80600252033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA569AE22F3B80600252033 /* AppDelegate.swift */; };
+		DDA569B122F3B80600252033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA569B022F3B80600252033 /* ViewController.swift */; };
+		DDA569B422F3B80600252033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA569B222F3B80600252033 /* Main.storyboard */; };
+		DDA569B622F3B80700252033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA569B522F3B80700252033 /* Assets.xcassets */; };
+		DDA569B922F3B80700252033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA569B722F3B80700252033 /* LaunchScreen.storyboard */; };
+		DDA569C422F3B80700252033 /* Aloompa_taskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA569C322F3B80700252033 /* Aloompa_taskTests.swift */; };
+		DDA569CF22F3B80700252033 /* Aloompa_taskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA569CE22F3B80700252033 /* Aloompa_taskUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDA569C022F3B80700252033 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDA569A322F3B80600252033 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDA569AA22F3B80600252033;
+			remoteInfo = "Aloompa task";
+		};
+		DDA569CB22F3B80700252033 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDA569A322F3B80600252033 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDA569AA22F3B80600252033;
+			remoteInfo = "Aloompa task";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DDA569AB22F3B80600252033 /* Aloompa task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aloompa task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDA569AE22F3B80600252033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DDA569B022F3B80600252033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDA569B322F3B80600252033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDA569B522F3B80700252033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDA569B822F3B80700252033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DDA569BA22F3B80700252033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDA569BF22F3B80700252033 /* Aloompa taskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aloompa taskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDA569C322F3B80700252033 /* Aloompa_taskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aloompa_taskTests.swift; sourceTree = "<group>"; };
+		DDA569C522F3B80700252033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDA569CA22F3B80700252033 /* Aloompa taskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aloompa taskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDA569CE22F3B80700252033 /* Aloompa_taskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aloompa_taskUITests.swift; sourceTree = "<group>"; };
+		DDA569D022F3B80700252033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDA569A822F3B80600252033 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA569BC22F3B80700252033 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA569C722F3B80700252033 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DDA569A222F3B80600252033 = {
+			isa = PBXGroup;
+			children = (
+				DDA569AD22F3B80600252033 /* Aloompa task */,
+				DDA569C222F3B80700252033 /* Aloompa taskTests */,
+				DDA569CD22F3B80700252033 /* Aloompa taskUITests */,
+				DDA569AC22F3B80600252033 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DDA569AC22F3B80600252033 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDA569AB22F3B80600252033 /* Aloompa task.app */,
+				DDA569BF22F3B80700252033 /* Aloompa taskTests.xctest */,
+				DDA569CA22F3B80700252033 /* Aloompa taskUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDA569AD22F3B80600252033 /* Aloompa task */ = {
+			isa = PBXGroup;
+			children = (
+				DDA569AE22F3B80600252033 /* AppDelegate.swift */,
+				DDA569B022F3B80600252033 /* ViewController.swift */,
+				DDA569B222F3B80600252033 /* Main.storyboard */,
+				DDA569B522F3B80700252033 /* Assets.xcassets */,
+				DDA569B722F3B80700252033 /* LaunchScreen.storyboard */,
+				DDA569BA22F3B80700252033 /* Info.plist */,
+			);
+			path = "Aloompa task";
+			sourceTree = "<group>";
+		};
+		DDA569C222F3B80700252033 /* Aloompa taskTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDA569C322F3B80700252033 /* Aloompa_taskTests.swift */,
+				DDA569C522F3B80700252033 /* Info.plist */,
+			);
+			path = "Aloompa taskTests";
+			sourceTree = "<group>";
+		};
+		DDA569CD22F3B80700252033 /* Aloompa taskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DDA569CE22F3B80700252033 /* Aloompa_taskUITests.swift */,
+				DDA569D022F3B80700252033 /* Info.plist */,
+			);
+			path = "Aloompa taskUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDA569AA22F3B80600252033 /* Aloompa task */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDA569D322F3B80700252033 /* Build configuration list for PBXNativeTarget "Aloompa task" */;
+			buildPhases = (
+				DDA569A722F3B80600252033 /* Sources */,
+				DDA569A822F3B80600252033 /* Frameworks */,
+				DDA569A922F3B80600252033 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Aloompa task";
+			productName = "Aloompa task";
+			productReference = DDA569AB22F3B80600252033 /* Aloompa task.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DDA569BE22F3B80700252033 /* Aloompa taskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDA569D622F3B80700252033 /* Build configuration list for PBXNativeTarget "Aloompa taskTests" */;
+			buildPhases = (
+				DDA569BB22F3B80700252033 /* Sources */,
+				DDA569BC22F3B80700252033 /* Frameworks */,
+				DDA569BD22F3B80700252033 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDA569C122F3B80700252033 /* PBXTargetDependency */,
+			);
+			name = "Aloompa taskTests";
+			productName = "Aloompa taskTests";
+			productReference = DDA569BF22F3B80700252033 /* Aloompa taskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DDA569C922F3B80700252033 /* Aloompa taskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDA569D922F3B80700252033 /* Build configuration list for PBXNativeTarget "Aloompa taskUITests" */;
+			buildPhases = (
+				DDA569C622F3B80700252033 /* Sources */,
+				DDA569C722F3B80700252033 /* Frameworks */,
+				DDA569C822F3B80700252033 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDA569CC22F3B80700252033 /* PBXTargetDependency */,
+			);
+			name = "Aloompa taskUITests";
+			productName = "Aloompa taskUITests";
+			productReference = DDA569CA22F3B80700252033 /* Aloompa taskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDA569A322F3B80600252033 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Aidan Gutierrez";
+				TargetAttributes = {
+					DDA569AA22F3B80600252033 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					DDA569BE22F3B80700252033 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = DDA569AA22F3B80600252033;
+					};
+					DDA569C922F3B80700252033 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = DDA569AA22F3B80600252033;
+					};
+				};
+			};
+			buildConfigurationList = DDA569A622F3B80600252033 /* Build configuration list for PBXProject "Aloompa task" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDA569A222F3B80600252033;
+			productRefGroup = DDA569AC22F3B80600252033 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDA569AA22F3B80600252033 /* Aloompa task */,
+				DDA569BE22F3B80700252033 /* Aloompa taskTests */,
+				DDA569C922F3B80700252033 /* Aloompa taskUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDA569A922F3B80600252033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA569B922F3B80700252033 /* LaunchScreen.storyboard in Resources */,
+				DDA569B622F3B80700252033 /* Assets.xcassets in Resources */,
+				DDA569B422F3B80600252033 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA569BD22F3B80700252033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA569C822F3B80700252033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDA569A722F3B80600252033 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA569B122F3B80600252033 /* ViewController.swift in Sources */,
+				DDA569AF22F3B80600252033 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA569BB22F3B80700252033 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA569C422F3B80700252033 /* Aloompa_taskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDA569C622F3B80700252033 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDA569CF22F3B80700252033 /* Aloompa_taskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDA569C122F3B80700252033 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDA569AA22F3B80600252033 /* Aloompa task */;
+			targetProxy = DDA569C022F3B80700252033 /* PBXContainerItemProxy */;
+		};
+		DDA569CC22F3B80700252033 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDA569AA22F3B80600252033 /* Aloompa task */;
+			targetProxy = DDA569CB22F3B80700252033 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DDA569B222F3B80600252033 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDA569B322F3B80600252033 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DDA569B722F3B80700252033 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDA569B822F3B80700252033 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDA569D122F3B80700252033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DDA569D222F3B80700252033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDA569D422F3B80700252033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Aloompa task/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cracked.Aloompa-task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDA569D522F3B80700252033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Aloompa task/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cracked.Aloompa-task";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DDA569D722F3B80700252033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Aloompa taskTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cracked.Aloompa-taskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aloompa task.app/Aloompa task";
+			};
+			name = Debug;
+		};
+		DDA569D822F3B80700252033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Aloompa taskTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cracked.Aloompa-taskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aloompa task.app/Aloompa task";
+			};
+			name = Release;
+		};
+		DDA569DA22F3B80700252033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Aloompa taskUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cracked.Aloompa-taskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aloompa task";
+			};
+			name = Debug;
+		};
+		DDA569DB22F3B80700252033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Aloompa taskUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cracked.Aloompa-taskUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aloompa task";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDA569A622F3B80600252033 /* Build configuration list for PBXProject "Aloompa task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDA569D122F3B80700252033 /* Debug */,
+				DDA569D222F3B80700252033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDA569D322F3B80700252033 /* Build configuration list for PBXNativeTarget "Aloompa task" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDA569D422F3B80700252033 /* Debug */,
+				DDA569D522F3B80700252033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDA569D622F3B80700252033 /* Build configuration list for PBXNativeTarget "Aloompa taskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDA569D722F3B80700252033 /* Debug */,
+				DDA569D822F3B80700252033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDA569D922F3B80700252033 /* Build configuration list for PBXNativeTarget "Aloompa taskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDA569DA22F3B80700252033 /* Debug */,
+				DDA569DB22F3B80700252033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDA569A322F3B80600252033 /* Project object */;
+}
