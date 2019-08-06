@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD4FE07D22F8BA14004DB778 /* RapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4FE07C22F8BA14004DB778 /* RapperViewController.swift */; };
+		DD4FE0BD22FA0C89004DB778 /* Aloompa  Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD4FE0BB22FA0C89004DB778 /* Aloompa  Task.xcdatamodeld */; };
 		DDA569AF22F3B80600252033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA569AE22F3B80600252033 /* AppDelegate.swift */; };
 		DDA569B122F3B80600252033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA569B022F3B80600252033 /* ViewController.swift */; };
 		DDA569B422F3B80600252033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA569B222F3B80600252033 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		DDA569B922F3B80700252033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA569B722F3B80700252033 /* LaunchScreen.storyboard */; };
 		DDA569C422F3B80700252033 /* Aloompa_taskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA569C322F3B80700252033 /* Aloompa_taskTests.swift */; };
 		DDA569CF22F3B80700252033 /* Aloompa_taskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA569CE22F3B80700252033 /* Aloompa_taskUITests.swift */; };
+		DDA56C0522F789F600252033 /* RapperContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA56C0422F789F600252033 /* RapperContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD4FE07C22F8BA14004DB778 /* RapperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapperViewController.swift; sourceTree = "<group>"; };
+		DD4FE0BC22FA0C89004DB778 /* Aloompa  Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Aloompa  Task.xcdatamodel"; sourceTree = "<group>"; };
 		DDA569AB22F3B80600252033 /* Aloompa task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aloompa task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA569AE22F3B80600252033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA569B022F3B80600252033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		DDA569CA22F3B80700252033 /* Aloompa taskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aloompa taskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA569CE22F3B80700252033 /* Aloompa_taskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aloompa_taskUITests.swift; sourceTree = "<group>"; };
 		DDA569D022F3B80700252033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDA56C0422F789F600252033 /* RapperContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapperContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,12 @@
 			children = (
 				DDA569AE22F3B80600252033 /* AppDelegate.swift */,
 				DDA569B022F3B80600252033 /* ViewController.swift */,
+				DD4FE07C22F8BA14004DB778 /* RapperViewController.swift */,
+				DDA56C0422F789F600252033 /* RapperContainer.swift */,
 				DDA569B222F3B80600252033 /* Main.storyboard */,
 				DDA569B522F3B80700252033 /* Assets.xcassets */,
 				DDA569B722F3B80700252033 /* LaunchScreen.storyboard */,
+				DD4FE0BB22FA0C89004DB778 /* Aloompa  Task.xcdatamodeld */,
 				DDA569BA22F3B80700252033 /* Info.plist */,
 			);
 			path = "Aloompa task";
@@ -256,7 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4FE0BD22FA0C89004DB778 /* Aloompa  Task.xcdatamodeld in Sources */,
 				DDA569B122F3B80600252033 /* ViewController.swift in Sources */,
+				DDA56C0522F789F600252033 /* RapperContainer.swift in Sources */,
+				DD4FE07D22F8BA14004DB778 /* RapperViewController.swift in Sources */,
 				DDA569AF22F3B80600252033 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNU8224D56;
 				INFOPLIST_FILE = "Aloompa task/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNU8224D56;
 				INFOPLIST_FILE = "Aloompa task/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -580,6 +594,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DD4FE0BB22FA0C89004DB778 /* Aloompa  Task.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DD4FE0BC22FA0C89004DB778 /* Aloompa  Task.xcdatamodel */,
+			);
+			currentVersion = DD4FE0BC22FA0C89004DB778 /* Aloompa  Task.xcdatamodel */;
+			path = "Aloompa  Task.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DDA569A322F3B80600252033 /* Project object */;
 }
