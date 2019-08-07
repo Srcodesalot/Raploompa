@@ -218,7 +218,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
         view.addSubview(stackview)
         view.addSubview(search)
         
-        // wonky timer logic
+        //logic
         var x = 0
         var y = 0
         while x<1{
