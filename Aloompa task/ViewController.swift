@@ -37,7 +37,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
         stack.distribution = .fillEqually
         stack.axis = .vertical
         stack.spacing = 40
-       return stack
+        return stack
     }()
     
     //creates individual buttons that will work as stacks
@@ -51,7 +51,30 @@ class ViewController: UIViewController, UISearchBarDelegate{
         }
         loadstacks()
     }
-   
+    
+    // creates each individual stack viewpieces incase so if there are more rappers added to the list you do not have to make more individual views for each individual one
+    func loadstacks (){
+        print(buttons.count)
+        view.addSubview(stackview)
+        stackview.heightAnchor.constraint(equalToConstant: view.frame.height - 200).isActive = true
+        stackview.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
+        stackview.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        stackview.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        noContent.text = "Sorry! No Rapper Found"
+        noContent.textAlignment = .center
+        noContent.textColor = .darkGray
+        noContent.isHidden = true
+        stackview.addArrangedSubview(noContent)
+        for button in buttons{
+            button.imageView?.contentMode = .scaleAspectFill
+            button.contentMode = .scaleAspectFill
+            button.subviews.first?.contentMode = .scaleAspectFill
+            button.clipsToBounds = true
+            button.titleLabel?.backgroundColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.6)
+            stackview.addArrangedSubview(button)
+        }
+    }
+    
     //retrieves json information and caches it
     func parseJson() {
         guard let appDeli = UIApplication.shared.delegate as? AppDelegate else {return}
@@ -66,6 +89,8 @@ class ViewController: UIViewController, UISearchBarDelegate{
                 for data in fetched as! [NSManagedObject]{
                     let rapper = Wrapper.init(id: data.value(forKey: "id") as! String, name: data.value(forKey: "name") as! String, description: data.value(forKey: "about") as! String, image: data.value(forKey: "image") as! String)
                     wrappers.append(rapper)
+                    offline = true
+                    createButtons()
                 }
             }catch let error{
                 print(error)
@@ -104,66 +129,38 @@ class ViewController: UIViewController, UISearchBarDelegate{
     }
     
     func parsePhoto(urlString : String ) -> UIImage {
+        // for some reason offline variable was not working here so to work around for the sake of time i used a second check if there is an error parseing the images it then pulls from the cache
         guard let appDeli = UIApplication.shared.delegate as? AppDelegate else {return #imageLiteral(resourceName: "Image") }
         let container = appDeli.persistentContainer.viewContext
         let rapperPicEntity = NSEntityDescription.entity(forEntityName: "RapperPic", in: container )!
-        
-        if offline == true {
-            let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "RapperPic")
-            breakPoint: do{
-                let fetched = try container.fetch(fetch)
-                for data in fetched as! [NSManagedObject]{
-                    if data.value(forKey: "name") as! String == urlString{
-                        guard let rapImg: UIImage = UIImage(data: data.value(forKey: "data") as! Data) else {break breakPoint}
-                        return (rapImg)
-                    }
-                }
-            }catch let error{
-                print(error)
-            }
-            
-        }
-        else{
             let rapperPic  = NSManagedObject(entity: rapperPicEntity , insertInto: container)
             if let url = URL(string: urlString){
                 breakPoint: do{
                     let data = try Data (contentsOf: url)
-                    rapperPic.setValue(urlString, forKey: "name")
-                    rapperPic.setValue(data, forKey: "data")
-                    try container.save()
                     guard let rapImg: UIImage = UIImage(data: data) else { break breakPoint}
+                    rapperPic.setValue(urlString, forKey: "name")
+                    rapperPic.setValue(rapImg.jpegData(compressionQuality: 1), forKey: "data")
+                    try container.save()
                     return (rapImg)
                 }catch let error{
                     print(error)
                 }
+                let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "RapperPic")
+                reakPoint: do{
+                    let fetched = try container.fetch(fetch)
+                    for data in fetched as! [NSManagedObject]{
+                        if data.value(forKey: "name") as! String == urlString{
+                            let data = data.value(forKey: "data")
+                            guard let rapImg: UIImage = UIImage(data: data as! Data) else {break reakPoint}
+                            return (rapImg)
+                        }
+                    }
+                }catch let error{
+                    print(error)
+                }
             }
-
-        }
-        return( #imageLiteral(resourceName: "Image"))
+        return( #imageLiteral(resourceName: "Image-1"))
     }
-            // creates each individual stack viewpieces incase so if there are more rappers added to the list you do not have to make more individual views for each individual one
-    func loadstacks (){
-        print(buttons.count)
-        view.addSubview(stackview)
-        stackview.heightAnchor.constraint(equalToConstant: view.frame.height - 200).isActive = true
-        stackview.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
-        stackview.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        stackview.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        noContent.text = "Sorry! No Rapper Found"
-        noContent.textAlignment = .center
-        noContent.textColor = .darkGray
-        noContent.isHidden = true
-        stackview.addArrangedSubview(noContent)
-        for button in buttons{
-            button.imageView?.contentMode = .scaleAspectFill
-            button.contentMode = .scaleAspectFill
-            button.subviews.first?.contentMode = .scaleAspectFill
-            button.clipsToBounds = true
-            button.titleLabel?.backgroundColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.6)
-            stackview.addArrangedSubview(button)
-        }
-    }
-    
     
     // functional functions
     @objc func handelButton(sender: UIButton){
@@ -211,7 +208,6 @@ class ViewController: UIViewController, UISearchBarDelegate{
         parseJson()
         
         //subviews
-        view.addSubview(stackview)
         search = UISearchBar(frame: CGRect(x: 0, y: 30, width: view.frame.width, height: 0))
         search.searchBarStyle = .minimal
         search.barStyle = .blackOpaque
@@ -219,27 +215,26 @@ class ViewController: UIViewController, UISearchBarDelegate{
         search.placeholder = ("Finda Wrapper")
         search.sizeToFit()
         search.delegate = self
-        
+        view.addSubview(stackview)
         view.addSubview(search)
         
         //logic
-
         var x = 0
         var y = 0
         while x<1{
             y = y+1
             print (y)
+            if y == 5000 {
+                print("error loading json")
+                offline = true
+                //createButtons()
+                x = 1
+            }
             if wrappers.count != 0{
                 createButtons()
-                loadstacks()
             }
             if wrappers.count == 5 {
                 x = 1
-            }
-            if y == 5000 {
-                x = 1
-                print("error loading json")
-                offline = true
             }
         }
         
