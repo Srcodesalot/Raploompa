@@ -16,7 +16,6 @@
 		DDA569B922F3B80700252033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA569B722F3B80700252033 /* LaunchScreen.storyboard */; };
 		DDA569C422F3B80700252033 /* Aloompa_taskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA569C322F3B80700252033 /* Aloompa_taskTests.swift */; };
 		DDA569CF22F3B80700252033 /* Aloompa_taskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA569CE22F3B80700252033 /* Aloompa_taskUITests.swift */; };
-		DDA56C0522F789F600252033 /* RapperContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA56C0422F789F600252033 /* RapperContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		DDA569CA22F3B80700252033 /* Aloompa taskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aloompa taskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA569CE22F3B80700252033 /* Aloompa_taskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aloompa_taskUITests.swift; sourceTree = "<group>"; };
 		DDA569D022F3B80700252033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDA56C0422F789F600252033 /* RapperContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapperContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +104,6 @@
 				DDA569AE22F3B80600252033 /* AppDelegate.swift */,
 				DDA569B022F3B80600252033 /* ViewController.swift */,
 				DD4FE07C22F8BA14004DB778 /* RapperViewController.swift */,
-				DDA56C0422F789F600252033 /* RapperContainer.swift */,
 				DDA569B222F3B80600252033 /* Main.storyboard */,
 				DDA569B522F3B80700252033 /* Assets.xcassets */,
 				DDA569B722F3B80700252033 /* LaunchScreen.storyboard */,
@@ -267,7 +264,6 @@
 			files = (
 				DD4FE0BD22FA0C89004DB778 /* Aloompa  Task.xcdatamodeld in Sources */,
 				DDA569B122F3B80600252033 /* ViewController.swift in Sources */,
-				DDA56C0522F789F600252033 /* RapperContainer.swift in Sources */,
 				DD4FE07D22F8BA14004DB778 /* RapperViewController.swift in Sources */,
 				DDA569AF22F3B80600252033 /* AppDelegate.swift in Sources */,
 			);

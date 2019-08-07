@@ -7,7 +7,7 @@
 //
 import UIKit
 import CoreData
-// add security
+
 struct Artists: Decodable{
     let artists: [Wrapper]
 }
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
     var offline = false
     var search: UISearchBar = UISearchBar()
     var wrappers: [Wrapper] = []
-    
+
     //components
     var stackview: UIStackView = {
         var stack = UIStackView()
@@ -47,14 +47,16 @@ class ViewController: UIViewController, UISearchBarDelegate{
             button.setBackgroundImage(parsePhoto(urlString: rapper.image), for: .normal)
             button.setTitle(rapper.name, for: .normal)
             button.addTarget(self, action: #selector(handelButton), for: .touchUpInside)
+            button.titleLabel?.backgroundColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.6)
+            button.contentMode = .scaleAspectFill
+            button.clipsToBounds = true
             buttons.append(button)
         }
         loadstacks()
     }
     
-    // creates each individual stack viewpieces incase so if there are more rappers added to the list you do not have to make more individual views for each individual one
+    // creates each individual stack viewpiece so if there are more rappers added to the list you do not have to make more individual views for each individual one
     func loadstacks (){
-        print(buttons.count)
         view.addSubview(stackview)
         stackview.heightAnchor.constraint(equalToConstant: view.frame.height - 200).isActive = true
         stackview.widthAnchor.constraint(equalToConstant: view.frame.width - 40).isActive = true
@@ -67,10 +69,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
         stackview.addArrangedSubview(noContent)
         for button in buttons{
             button.imageView?.contentMode = .scaleAspectFill
-            button.contentMode = .scaleAspectFill
             button.subviews.first?.contentMode = .scaleAspectFill
-            button.clipsToBounds = true
-            button.titleLabel?.backgroundColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.6)
             stackview.addArrangedSubview(button)
         }
     }
@@ -80,7 +79,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
         guard let appDeli = UIApplication.shared.delegate as? AppDelegate else {return}
         let container = appDeli.persistentContainer.viewContext
         let rapperEntity = NSEntityDescription.entity(forEntityName: "Rapper", in: container )!
-        
+        //offline check meathod 1
         //if the device is offline this pulls data from the cache and populates a list
         if offline == true{
             let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Rapper")
@@ -96,7 +95,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
                 print(error)
             }
         }
-        // however if it is online it will initially ull the json to check for updates
+        // however if it is online it will initially pull the json to check for updates
         else{
             let rapperJson = "http://assets.aloompa.com.s3.amazonaws.com/rappers/rappers.json"
             guard let url = URL(string: rapperJson) else {return}
@@ -129,7 +128,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
     }
     
     func parsePhoto(urlString : String ) -> UIImage {
-        // for some reason offline variable was not working here so to work around for the sake of time i used a second check if there is an error parseing the images it then pulls from the cache
+        // first the code attempts to hit the json to get the most up to date data but if that fails(aka offline) it pulls frome the cache
         guard let appDeli = UIApplication.shared.delegate as? AppDelegate else {return #imageLiteral(resourceName: "Image") }
         let container = appDeli.persistentContainer.viewContext
         let rapperPicEntity = NSEntityDescription.entity(forEntityName: "RapperPic", in: container )!
@@ -144,7 +143,9 @@ class ViewController: UIViewController, UISearchBarDelegate{
                     return (rapImg)
                 }catch let error{
                     print(error)
+                    offline = true
                 }
+                if  offline == true {
                 let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "RapperPic")
                 reakPoint: do{
                     let fetched = try container.fetch(fetch)
@@ -157,6 +158,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
                     }
                 }catch let error{
                     print(error)
+                }
                 }
             }
         return( #imageLiteral(resourceName: "Image-1"))
@@ -172,7 +174,6 @@ class ViewController: UIViewController, UISearchBarDelegate{
             }
         }
         let RVC = RapperViewController()
-        print (carryName)
         RVC.Name = carryName
         RVC.Image = carryImage
         RVC.Description = carryDescription
@@ -202,7 +203,6 @@ class ViewController: UIViewController, UISearchBarDelegate{
         }
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         parseJson()
@@ -218,12 +218,12 @@ class ViewController: UIViewController, UISearchBarDelegate{
         view.addSubview(stackview)
         view.addSubview(search)
         
-        //logic
+        // wonky timer logic
         var x = 0
         var y = 0
         while x<1{
             y = y+1
-            print (y)
+            //this works as a timer while the json is parsing and populating the wrappers array
             if y == 5000 {
                 print("error loading json")
                 offline = true
@@ -237,10 +237,6 @@ class ViewController: UIViewController, UISearchBarDelegate{
                 x = 1
             }
         }
-        
-        // Do any additional setup after loading the view.
     }
-
-
 }
 
